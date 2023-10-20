@@ -1,0 +1,31 @@
+.container{
+  background-color: black;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+}
+.display{
+  width: 290px;
+  height: 50px;
+}
+.simp{
+  color: white;
+  font-family:cursive ;
+}
+.number{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-size: 30px;
+  background-color: #333333;
+  color: white;
+  box-shadow: none;
+}
+.number0{
+  height: 65px;
+  border-radius: 30px;
+  width: 140px;
+}
