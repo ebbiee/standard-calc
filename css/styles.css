@@ -28,4 +28,43 @@
   height: 65px;
   border-radius: 30px;
   width: 140px;
+  font-size: 30px;
+  background-color: #333333;
+  color: white;
+}
+.operator{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+  background-color: #fe9505;
+}
+.operator:hover{
+  background-color: white;
+  color: #fe9505;
+}
+.reset, .module{
+  background-color: #a5a5a5;
+  color: #000000;
+}
+.reset:hover , .module:hover, .number0:hover{
+  background-color: white;
+  color: black;
+} 
+.number:hover{
+  background-color: white;
+  color: black;
+}
+#equalsTo{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+  background-color: #fe9505;
+}
+#equalsTo:hover{
+  background-color: white;
+  color: #fe9505;
 }
