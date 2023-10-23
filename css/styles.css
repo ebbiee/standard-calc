@@ -1,5 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease;
+}
 .container{
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.container2{
+  width: fit-content;
+  box-shadow: 0 0 30px #000000;
+  background-color: #0a1e23;
+  position: relative;
+  margin-top: 100px;
+  display: grid;
+} 
+body{
+  background: linear-gradient(to bottom right, rgba(79,51,176,1), rgba(210,53,165));
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 .center{
   display: flex;
@@ -64,7 +88,7 @@
   color: white;
   background-color: #fe9505;
 }
-#equalsTo:hover{
+#equalsTo:active{
   background-color: white;
   color: #fe9505;
 }
