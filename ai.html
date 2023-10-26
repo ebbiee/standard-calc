@@ -1,61 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <title>Simple Calculator</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        .calculator {
-            width: 200px;
-            margin: 0 auto;
-        }
-        input[type="text"], input[type="button"] {
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
     <div class="calculator">
         <input type="text" id="display" readonly>
-        <br>
-        <input type="button" value="1" onclick="appendToDisplay('1')">
-        <input type="button" value="2" onclick="appendToDisplay('2')">
-        <input type="button" value="3" onclick="appendToDisplay('3')">
-        <input type="button" value="+" onclick="appendToDisplay('+')">
-        <br>
-        <input type="button" value="4" onclick="appendToDisplay('4')">
-        <input type="button" value="5" onclick="appendToDisplay('5')">
-        <input type="button" value="6" onclick="appendToDisplay('6')">
-        <input type="button" value="-" onclick="appendToDisplay('-')">
-        <br>
-        <input type="button" value="7" onclick="appendToDisplay('7')">
-        <input type="button" value="8" onclick="appendToDisplay('8')">
-        <input type="button" value="9" onclick="appendToDisplay('9')">
-        <input type="button" value="*" onclick="appendToDisplay('*')">
-        <br>
-        <input type="button" value="C" onclick="clearDisplay()">
-        <input type="button" value="0" onclick="appendToDisplay('0')">
-        <input type="button" value="=" onclick="calculate()">
-        <input type="button" value="/" onclick="appendToDisplay('/')">
+        <div class="buttons">
+            <button class="number" value="7">7</button>
+            <button class="number" value="8">8</button>
+            <button class="number" value="9">9</button>
+            <button class="operator" value="+">+</button>
+            <button class="number" value="4">4</button>
+            <button class="number" value="5">5</button>
+            <button class="number" value="6">6</button>
+            <button class="operator" value="-">-</button>
+            <button class="number" value="1">1</button>
+            <button class="number" value="2">2</button>
+            <button class="number" value="3">3</button>
+            <button class="operator" value="*">*</button>
+            <button class="number" value="0">0</button>
+            <button class="operator" value="/">/</button>
+            <button id="calculate">=</button>
+            <button id="clear">C</button>
+        </div>
     </div>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
 
+.calculator {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#display {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
     <script>
-        function appendToDisplay(value) {
-            $("#display").val($("#display").val() + value);
-        }
+        $(document).ready(function () {
+    let displayValue = "";
 
-        function clearDisplay() {
-            $("#display").val("");
-        }
+    $(".number").click(function () {
+        displayValue += $(this).val();
+        $("#display").val(displayValue);
+    });
 
-        // function calculate() {
-        //     try {
-        //         $("#display").val(eval($("#display").val()));
-        //     } catch (error) {
-        //         $("#display").val("Error");
-        //     }
-        // }
+    // $(".operator").click(function () {
+    //     displayValue += $(this).val();
+    //     $("#display").val(displayValue);
+    // });
+
+    // $("#clear").click(function () {
+    //     displayValue = "";
+    //     $("#display").val("");
+    // });
+
+    // $("#calculate").click(function () {
+    //     try {
+    //         displayValue = eval(displayValue);
+    //         $("#display").val(displayValue);
+    //     } catch (error) {
+    //         $("#display").val("Error");
+    //     }
+    // });
+});
+
     </script>
 </body>
 </html>
