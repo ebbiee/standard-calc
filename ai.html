@@ -86,24 +86,24 @@ button:hover {
         $("#display").val(displayValue);
     });
 
-    // $(".operator").click(function () {
-    //     displayValue += $(this).val();
-    //     $("#display").val(displayValue);
-    // });
+    $(".operator").click(function () {
+        displayValue += $(this).val();
+        $("#display").val(displayValue);
+    });
 
-    // $("#clear").click(function () {
-    //     displayValue = "";
-    //     $("#display").val("");
-    // });
+    $("#clear").click(function () {
+        displayValue = "";
+        $("#display").val("");
+    });
 
-    // $("#calculate").click(function () {
-    //     try {
-    //         displayValue = eval(displayValue);
-    //         $("#display").val(displayValue);
-    //     } catch (error) {
-    //         $("#display").val("Error");
-    //     }
-    // });
+    $("#calculate").click(function () {
+        try {
+            displayValue = eval(displayValue);
+            $("#display").val(displayValue);
+        } catch (error) {
+            $("#display").val("Error");
+        }
+    });
 });
 
     </script>

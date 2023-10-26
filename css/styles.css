@@ -117,11 +117,10 @@ button:hover {
   transform: scale(1.1);
 }
 .reset{
-  width: 135px;
   background-color: #2d191e;
   color: #b82d33;
   height: 60px;
-  width: 135px;
+  width: 60px;
   border: 0;
   border-radius: 30px;
   margin: 5px;
@@ -146,4 +145,16 @@ button:hover {
 .number, .number0{
   background-color:  #1b2f38;
   color: #ffffff;
+}
+.clear{
+  background-color: #2d191e;
+  color: #b82d33;
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
 }
